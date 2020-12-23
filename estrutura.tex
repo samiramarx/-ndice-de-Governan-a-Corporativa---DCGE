@@ -1,0 +1,49 @@
+\documentclass[12pt,a4paper,oneside]{book}                      % tipo de documento
+\usepackage[top=3cm,bottom=2cm,right=2cm,left=3cm]{geometry}    % margem
+\usepackage[utf8x]{inputenc}                                    % acentuacao
+\usepackage{ucs}
+%\usepackage[light,math]{anttor} 								% fonte. http://www.tug.dk/FontCatalogue/
+\usepackage[T1]{fontenc}
+\usepackage[brazil]{babel}                                      % hifenizacao
+\usepackage{amsmath}                                            % pacote matemática
+\usepackage{indentfirst} 										% identacao dos paragrafos
+\usepackage{hyperref} 											% hiperlinks (itens clicaveis)
+\usepackage{graphicx} 											% ferramentas graficas
+\usepackage{amsmath} 											% ferramentas matematicas
+\usepackage{amsfonts}											% ferramentas matematicas
+\usepackage{amssymb}											% ferramentas matematicas
+\usepackage{pdfpages}											% inclusao de paginas em pdf
+\usepackage{epstopdf}											% inclusao de figuras em eps
+\usepackage{xcolor}												% habilita cores (capa)
+\usepackage[some]{background} 									% papel de parede (capa)
+\usepackage{color,soul} %para marcação em amarelo do texto
+\usepackage[titletoc]{appendix} %para apêndices
+\renewcommand\appendixtocname{Apêndices}
+\usepackage{longtable} %para tabelas que ultrapassam uma página
+\usepackage{framed} %para caixas ao redor do texto
+
+
+% CONFIGURACAO DA CAPA
+%
+\definecolor{titlepagecolor}{cmyk}{0.10,.05,.05,.3} % definicao de cor
+
+\backgroundsetup{
+scale=1,
+angle=0,
+opacity=1,
+contents={\begin{tikzpicture}[remember picture,overlay]
+ \path [fill=titlepagecolor] (current page.west)rectangle (current page.north east); 
+ %\draw [color=white, very thick] (5,0)--(5,0.5\paperheight);
+\end{tikzpicture}}
+} % configura o plano de fundo
+
+
+
+
+
+
+\makeatletter                   
+\def\printauthor{%                  
+    {\large \@author}}          
+\makeatother
+% FIM DA CONFIGURACAO DA CAPA
